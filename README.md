@@ -7,7 +7,7 @@ In this challenge, you’ll help Jeremy and the data analytics team do the follo
 - Run t-tests to determine if the manufacturing lots are statistically different from the mean population
 - Design a statistical study to compare vehicle performance of the MechaCar vehicles against vehicles from other manufacturers. For each statistical analysis, you’ll write a summary interpretation of the findings.
 
-## Linear Regression to Predict MPG
+## 1. Linear Regression to Predict MPG
 
 A linear model is designed that predicts the mpg of MechaCar prototypes using several variables from the [MechaCar_mpg.csv](https://github.com/rmat112/MechaCar_Statistical_Analysis/blob/main/MechaCar_mpg.csv) file
 
@@ -36,3 +36,19 @@ A linear model is designed that predicts the mpg of MechaCar prototypes using se
 
 3. From our linear regression model, the r-squared value is 0.7149, which means that roughly 71% of the variablilty of our dependent variable (mpg) is explained using this linear model
 ![r-sq.png](https://github.com/rmat112/MechaCar_Statistical_Analysis/blob/main/Resources/r-sq.png)
+
+## 2. Suspension Coil Summary Statistics
+The MechaCar [Suspension_Coil.csv](https://github.com/rmat112/MechaCar_Statistical_Analysis/blob/main/Suspension_Coil.csv) dataset contains the results from multiple production lots. In this dataset, the weight capacities of multiple suspension coils were tested to determine if the manufacturing process is consistent across production lots.
+
+#### Summary
+An RScipt [MechaCarChallenge.R](https://github.com/rmat112/MechaCar_Statistical_Analysis/blob/main/MechaCarChallenge.R) was written to get the mean, median, variance, and standard deviation of the suspension coil’s PSI column
+![total_summary.png](https://github.com/rmat112/MechaCar_Statistical_Analysis/blob/main/Resources/total_summary.png)
+
+#### Summary Grouped by Lot
+An RScript [MechaCarChallenge.R](https://github.com/rmat112/MechaCar_Statistical_Analysis/blob/main/MechaCarChallenge.R) was written to group each manufacturing lot by the mean, median, variance, and standard deviation of the suspension coil’s PSI column.
+![Lot_summary.pn](https://github.com/rmat112/MechaCar_Statistical_Analysis/blob/main/Resources/Lot_summary.png)
+
+#### Design Specification
+The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch. As seen from the total_summary and the lot_summary above, the combined variance (62.29 PSI) of the current manufacturing data and the variance from manufacturing lots 1 & 2 (0.98 PSI and 7.47 PSI, resp) meets this design specification (<100 PSI). However, the variance for Lot 3 (170.29 PSI) is significantly higher that 100 pounds per sq inch.
+
+## 3. T-Tests on Suspension Coils
