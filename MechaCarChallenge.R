@@ -13,8 +13,8 @@ summary(lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_cleara
 # Multiple R-squared:  0.7149,	Adjusted R-squared:  0.6825
 # p-value: 5.35e-11
 
-# Create Visualizations for the Trip Analysis - Suspension coil
-# Import and read tge csv file
+# Suspension coil statistics
+# Import and read the csv file
 susp_coil <- read.csv('Suspension_Coil.csv')
 
 # total_summary to get the mean, median, variance, and standard deviation of the suspension coil’s PSI column
