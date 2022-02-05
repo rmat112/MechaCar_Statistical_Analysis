@@ -1,3 +1,4 @@
+# Linear Regression to Predict MPG
 # Use the library() function to load the dplyr package.
 library(dplyr)
 
@@ -11,3 +12,13 @@ lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AW
 summary(lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD, data = mecha_df)) #generate summary statistics
 # Multiple R-squared:  0.7149,	Adjusted R-squared:  0.6825
 # p-value: 5.35e-11
+
+# Create Visualizations for the Trip Analysis - Suspension coil
+# Import and read tge csv file
+susp_coil <- read.csv('Suspension_Coil.csv')
+
+# total_summary to get the mean, median, variance, and standard deviation of the suspension coil’s PSI column
+total_summary <- susp_coil %>% summarise(Mean = mean(PSI), Meadian = median(PSI), Variance = var(PSI), SD = sd(PSI))
+
+# group each manufacturing lot by the mean, median, variance, and standard deviation of the suspension coil’s PSI column
+lot_summary <- susp_coil %>% group_by(Manufacturing_Lot) %>% summarise(Mean = mean(PSI), Meadian = median(PSI), Variance = var(PSI), SD = sd(PSI))
