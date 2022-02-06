@@ -74,3 +74,17 @@ For Lot 2, p-value is 0.61. This value is still too high and indicates there isn
 For Lot 3, p-value = 0.042 is less than 0.05. This means we can reject the null hypothesis and that sample mean is statistically different from the population mean.
 
 ## 4. Study Design: MechaCar vs Competition
+A very important aspect of vehicle design is the highway fuel effeciency.
+
+#### Metrics to be tested
+Evaluate the MechaCar for highway fuel efficiency in comparison to the competition.
+
+#### Null hypothesis or alternative hypothesis
+H0(null hypothesis): MechCar's highway fuel efficiency is similar to the competition (the true mean difference, or "μd" is equal to zero)
+Ha(alternate hypothesis): MechaCar's highway fuel efficiency is statistically different from the competition (μd" is not equal to zero)
+
+#### Statistical test to test the hypothesis
+It is recommended to use the two-sample t-tests for this design comparison because the two-sample t-tests are flexible and can be used to compare two samples, each from a different population. This is known as a pair t-test, because we pair observations in one dataset with observations in another.
+
+#### Data needed to run the statistical test
+We will need the highway fuel effeciency data not only for th MechaCar prototypes but also for the competition.
